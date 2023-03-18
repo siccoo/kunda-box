@@ -17,7 +17,7 @@ function parseNames() {
         colName.innerText = name.trim();
  
         const colActions = document.createElement("td");
-        colActions.innerHTML = '<button onclick="editName(\'' + name.trim() + '\')">Edit</button> <button onclick="deleteName(\'' + name.trim() + '\')">Delete</button>';
+        colActions.innerHTML = '<button class="btn" onclick="editName(\'' + name.trim() + '\')">Edit</button> <button class="btn" onclick="deleteName(\'' + name.trim() + '\')">Delete</button>';
  
         row.appendChild(colName);
         row.appendChild(colActions);
