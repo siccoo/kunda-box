@@ -66,17 +66,21 @@ input:focus {
   box-shadow: 0 0 10px #000000;
 }
 
-
-
 th {
   color: #fff;
   font-size: 20px;
   padding-left: 35px;
 }
 
-#namesList {
-    color: #fff;
-    font-size: 20px;
-    
+td {
+    padding-left: 35px;
 }
 
+#namesList {
+    color: #fff;
+    font-size: 20px;   
+}
+
+.btn {
+    margin-left: 35px;
+}

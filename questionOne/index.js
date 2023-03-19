@@ -2,7 +2,7 @@ import express from "express";
 const app = express();
 
 // Import required modules
-const { pool } = require('pg');
+import pool from 'pg';
 
 // Define the insert_user function
 async function insert_user(user_name, dob, email, password) {
@@ -51,6 +51,6 @@ async function insert_user(user_name, dob, email, password) {
 }
 
 // Export the insert_user function
-module.exports = {
+export default {
     insert_user
 };
