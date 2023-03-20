@@ -5,14 +5,14 @@
 - [node](https://nodejs.org/en/download/)
 - [Yarn](https://github.com/yarnpkg/yarn.) or [npm](https://github.com/npm/cli/)
 
-#### Installation:
+#### Cloning:
 
 ```
 git clone https://github.com/siccoo/kunda-box
 cd kunda-box
 ```
 
-Install it and run it:
+#### Installation and running:
 ```
 Question 1: 'yarn install' or 'npm install' to install dependencies
 
