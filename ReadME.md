@@ -13,8 +13,9 @@ cd kunda-box
 ```
 
 #### Installation and running:
-```
-Question 1: 'yarn install' or 'npm install' to install dependencies
+```bash
+Question 1: 
+'yarn install' or 'npm install' to install dependencies
 
 - Running locally, after installing dependencies
 $ npm run test
