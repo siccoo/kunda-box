@@ -1,11 +1,8 @@
-import express from "express";
-const app = express();
-
 // Import required modules
-import pool from 'pg';
+const pool = require("pg");
 
 // Define the insert_user function
-async function insert_user(user_name, dob, email, password) {
+export async function insert_user(user_name, dob, email, password) {
     // Validate the input parameters
     if (!user_name || user_name.length < 5 || user_name.length > 16) {
         return { result: false, code: 'INVALID_NAME' };
@@ -51,6 +48,6 @@ async function insert_user(user_name, dob, email, password) {
 }
 
 // Export the insert_user function
-export default {
-    insert_user
-};
+// export {
+//     insert_user
+// };

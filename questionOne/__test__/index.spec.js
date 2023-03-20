@@ -1,13 +1,14 @@
-import index from "../index";
+import { insert_user } from "../index";
 
 describe('insert_user function', () => {
-    beforeAll(async () => {
-        // Code to set up a test database
-    });
+    console.log(insert_user)
+    // beforeAll(async () => {
+    //     // Code to set up a test database
+    // });
 
-    afterAll(async () => {
-        // Code to clean up the test database
-    });
+    // afterAll(async () => {
+    //     // Code to clean up the test database
+    // });
 
     test('Adding a user with proper values should return true', async () => {
         const result = await insert_user('john123', new Date(1995, 7, 15), 'john@example.com', '12ABCabc');
