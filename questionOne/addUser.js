@@ -1,4 +1,4 @@
-import insert_user from "./index.js";
+const insert_user  = require("./index")
 
 async function addUser() {
     const user = {

@@ -1,8 +1,25 @@
 // Import required modules
-const pool = require("pg");
+const Pool = require("pg-pool");
+
+// you can pass properties to the pool
+// these properties are passed unchanged to both the node-postgres Client constructor
+// and the node-pool (https://github.com/coopernurse/node-pool) constructor
+// allowing you to fully configure the behavior of both
+var pool = new Pool({
+    host: 'postgresql-116686-0.cloudclusters.net',
+    database: 'kunda-box',
+    user: 'Michael',
+    password: '12345678',
+    port: 13958,
+    ssl: true,
+    max: 20, // set pool max size to 20
+    // idleTimeoutMillis: 1000, // close idle clients after 1 second
+    // connectionTimeoutMillis: 1000, // return an error after 1 second if connection could not be established
+    maxUses: 7500, // close (and replace) a connection after it has been used 7500 times (see below for discussion)
+})
 
 // Define the insert_user function
-export async function insert_user(user_name, dob, email, password) {
+async function insert_user(user_name, dob, email, password) {
     // Validate the input parameters
     if (!user_name || user_name.length < 5 || user_name.length > 16) {
         return { result: false, code: 'INVALID_NAME' };
@@ -48,6 +65,4 @@ export async function insert_user(user_name, dob, email, password) {
 }
 
 // Export the insert_user function
-// export {
-//     insert_user
-// };
+module.exports = insert_user

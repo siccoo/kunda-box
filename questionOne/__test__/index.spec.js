@@ -1,7 +1,6 @@
-import { insert_user } from "../index";
+const insert_user  = require("../index");
 
 describe('insert_user function', () => {
-    console.log(insert_user)
     // beforeAll(async () => {
     //     // Code to set up a test database
     // });
